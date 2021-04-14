@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Exerc_biblioteca.Models.livro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.editora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.edicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idioma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.capa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.editora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.edicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pagina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idioma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.capa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+﻿@model Exerc_biblioteca.Models.livro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>livro</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.editora)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.editora)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.edicao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.edicao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pagina)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pagina)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idioma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idioma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.capa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.capa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Editar" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">voltar</a>
+</div>

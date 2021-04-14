@@ -1,0 +1,63 @@
+﻿@model Exerc_biblioteca.Models.livro
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastrar Livro</h1>
+
+<h4>livro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="autor" class="control-label"></label>
+                <input asp-for="autor" class="form-control" />
+                <span asp-validation-for="autor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="editora" class="control-label"></label>
+                <input asp-for="editora" class="form-control" />
+                <span asp-validation-for="editora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="edicao" class="control-label"></label>
+                <input asp-for="edicao" class="form-control" />
+                <span asp-validation-for="edicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pagina" class="control-label"></label>
+                <input asp-for="pagina" class="form-control" />
+                <span asp-validation-for="pagina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idioma" class="control-label"></label>
+                <input asp-for="idioma" class="form-control" />
+                <span asp-validation-for="idioma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="genero" class="control-label"></label>
+                <input asp-for="genero" class="form-control" />
+                <span asp-validation-for="genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="capa" class="control-label"></label>
+                <input asp-for="capa" class="form-control" />
+                <span asp-validation-for="capa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
